@@ -1,4 +1,7 @@
-class TestWordCounts(TestCase):
+import unittest
+from word_count import words
+
+class TestWordCounts(unittest.TestCase):
 
     """
         Counts the occurrences or characters in a word
@@ -79,3 +82,6 @@ class TestWordCounts(TestCase):
             words('hello  world'),
             msg='should count multiple spaces as one'
         )
+        
+if __name__ == '__main__':
+    unittest.main()
